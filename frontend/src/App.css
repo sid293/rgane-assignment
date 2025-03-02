@@ -1,0 +1,514 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Common Components */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #0077b5;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Auth Pages */
+.login-container, .register-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.login-container h2, .register-container h2 {
+  text-align: center;
+  color: #0077b5;
+  margin-bottom: 30px;
+}
+
+.login-options {
+  display: flex;
+  gap: 30px;
+}
+
+.candidate-login, .company-login {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.candidate-login h3, .company-login h3 {
+  color: #0077b5;
+  margin-bottom: 15px;
+}
+
+.linkedin-button {
+  background-color: #0077b5;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.linkedin-button:hover {
+  background-color: #006097;
+}
+
+.login-button, .register-button {
+  background-color: #0077b5;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.login-button:hover, .register-button:hover {
+  background-color: #006097;
+}
+
+.register-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Candidate Profile */
+.candidate-profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-header h2 {
+  color: #0077b5;
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.profile-basic-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-name h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profile-section {
+  margin-bottom: 25px;
+}
+
+.profile-section h4 {
+  color: #0077b5;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.skills-list, .roles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag, .role-tag {
+  background-color: #e1f5fe;
+  color: #0288d1;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.edit-profile-button {
+  background-color: #0077b5;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.edit-profile-button:hover {
+  background-color: #006097;
+}
+
+.edit-profile-form {
+  margin-top: 20px;
+}
+
+.add-item-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.add-item-input input {
+  flex: 1;
+}
+
+.add-item-input button {
+  background-color: #0077b5;
+  color: white;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #e1f5fe;
+  color: #0288d1;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.remove-tag {
+  background: none;
+  color: #0288d1;
+  margin-left: 5px;
+  padding: 0 5px;
+  font-size: 1.2rem;
+}
+
+.remove-tag:hover {
+  color: #01579b;
+  transform: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.save-button {
+  background-color: #0077b5;
+  color: white;
+}
+
+/* Company Dashboard */
+.company-dashboard-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+  color: #0077b5;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.profile-button {
+  background-color: #0077b5;
+  color: white;
+}
+
+.filter-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.filter-section h3 {
+  color: #0077b5;
+  margin-bottom: 15px;
+}
+
+.filter-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.apply-filter-button {
+  background-color: #0077b5;
+  color: white;
+}
+
+.reset-filter-button {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.candidates-list h3 {
+  color: #0077b5;
+  margin-bottom: 20px;
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.candidate-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.candidate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.candidate-picture {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.candidate-picture-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0077b5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.candidate-location {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.candidate-skills, .candidate-roles {
+  margin-bottom: 15px;
+}
+
+.no-skills, .no-roles {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.more-skills, .more-roles {
+  color: #0077b5;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.view-profile-button {
+  background-color: #0077b5;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Candidate Details */
+.candidate-details-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.details-header h2 {
+  color: #0077b5;
+  margin-left: 20px;
+}
+
+.back-button {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.candidate-profile {
+  margin-top: 20px;
+}
+
+.profile-email, .profile-location {
+  color: #666;
+  margin-top: 5px;
+}
+
+.experience-item, .education-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child, .education-item:last-child {
+  border-bottom: none;
+}
+
+.experience-item h5, .education-item h5 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.company-name, .experience-location, .experience-dates, .education-dates {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.experience-description {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-options {
+    flex-direction: column;
+  }
+  
+  .filter-controls {
+    grid-template-columns: 1fr;
+  }
+}
