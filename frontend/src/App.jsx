@@ -10,7 +10,8 @@ import CandidateProfile from './components/candidate/CandidateProfile';
 import CompanyDashboard from './components/company/CompanyDashboard';
 import CompanyProfile from './components/company/CompanyProfile';
 import CandidateDetails from './components/company/CandidateDetails';
-import AuthCallback from './components/AuthCallback';
+// import AuthCallback from './components/AuthCallback';
+import AuthCallback from './components/auth/AuthCallback';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
